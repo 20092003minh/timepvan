@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng ký tham gia PV CTV BNS</title>
+    <style>
+        /* Thiết lập nền và căn giữa */
+        body {
+            background-color: #f0f8ff;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        /* Khung chính */
+        .container {
+            text-align: center;
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Hiệu ứng tiêu đề */
+        h1 {
+            color: #ff4500;
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        /* Hiệu ứng nút */
+        .button {
+            display: inline-block;
+            padding: 12px 25px;
+            margin: 10px;
+            background-color: #ff69b4;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 1.1em;
+            transition: transform 0.2s, background-color 0.3s;
+            cursor: pointer;
+        }
+
+        .button:hover {
+            background-color: #ff1493;
+            transform: scale(1.1);
+        }
+
+        /* Hiệu ứng nhảy cho tiêu đề */
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-20px); }
+            60% { transform: translateY(-10px); }
+        }
+
+        .bounce {
+            animation: bounce 2s infinite;
+        }
+
+        /* Hiệu ứng background ngộ nghĩnh */
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+
+        .floating {
+            position: absolute;
+            font-size: 2em;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        /* Video ẩn ban đầu */
+        #videoContainer {
+            display: none;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Các biểu tượng ngộ nghĩnh trôi nổi -->
+    <span class="floating" style="top: 10%; left: 10%;">🎉</span>
+    <span class="floating" style="top: 20%; right: 15%; animation-delay: 1s;">✨</span>
+    <span class="floating" style="bottom: 15%; left: 20%; animation-delay: 0.5s;">🌟</span>
+    <span class="floating" style="bottom: 25%; right: 10%; animation-delay: 1.5s;">🎈</span>
+
+    <!-- Khung chính -->
+    <div class="container">
+        <h1 class="bounce">Hãy đăng kí thời gian tham gia PV CTV BNS</h1>
+        <a href="https://forms.gle/7o6tf8MroPfbuHa98" class="button">Đăng ký ngay</a>
+        <button class="button" onclick="showVideo()">Những điều bạn có thể biết về ban</button>
+        <div id="videoContainer">
+            <iframe width="560" height="315" src="https://www.veed.io/view/39fb1ac2-8278-4598-b916-e2195d38aa0c?panel=share" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <!-- Script để hiển thị/ẩn video -->
+    <script>
+        function showVideo() {
+            var videoContainer = document.getElementById("videoContainer");
+            if (videoContainer.style.display === "none" || videoContainer.style.display === "") {
+                videoContainer.style.display = "block";
+            } else {
+                videoContainer.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
